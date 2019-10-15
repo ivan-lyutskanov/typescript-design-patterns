@@ -13,7 +13,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Car = /** @class */ (function () {
-    function Car() {
+    function Car(description, baseCost) {
+        this.description = description;
+        this.baseCost = baseCost;
     }
     Car.prototype.getDescription = function () {
         return this.description;
@@ -27,27 +29,25 @@ var Car = /** @class */ (function () {
 var ModelS = /** @class */ (function (_super) {
     __extends(ModelS, _super);
     function ModelS() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.description = 'Model S';
-        _this.baseCost = 80000;
-        return _this;
+        return _super.call(this, 'Model S', 80000) || this;
     }
     return ModelS;
 }(Car));
 var ModelX = /** @class */ (function (_super) {
     __extends(ModelX, _super);
     function ModelX() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.description = 'Model X';
-        _this.baseCost = 85000;
-        return _this;
+        return _super.call(this, 'Model X', 85000) || this;
     }
     return ModelX;
 }(Car));
 var CarOptions = /** @class */ (function (_super) {
     __extends(CarOptions, _super);
-    function CarOptions() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function CarOptions(decoratedCar, description, optionCost) {
+        var _this = _super.call(this, description, optionCost) || this;
+        _this.decoratedCar = decoratedCar;
+        _this.description = description;
+        _this.optionCost = optionCost;
+        return _this;
     }
     CarOptions.prototype.getDescription = function () {
         return this.decoratedCar.getDescription() + ', ' + this.description;
@@ -62,22 +62,14 @@ var CarOptions = /** @class */ (function (_super) {
 var AutoPilot = /** @class */ (function (_super) {
     __extends(AutoPilot, _super);
     function AutoPilot(car) {
-        var _this = _super.call(this) || this;
-        _this.description = 'AutoPilot';
-        _this.optionCost = 5000;
-        _this.decoratedCar = car;
-        return _this;
+        return _super.call(this, car, 'AutoPilot', 5000) || this;
     }
     return AutoPilot;
 }(CarOptions));
 var PerformancePack = /** @class */ (function (_super) {
     __extends(PerformancePack, _super);
     function PerformancePack(car) {
-        var _this = _super.call(this) || this;
-        _this.description = 'Performance Pack';
-        _this.optionCost = 10000;
-        _this.decoratedCar = car;
-        return _this;
+        return _super.call(this, car, 'Performance Pack', 10000) || this;
     }
     return PerformancePack;
 }(CarOptions));

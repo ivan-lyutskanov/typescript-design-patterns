@@ -1,8 +1,8 @@
 //Tesla car configurator
 
 abstract class Car {
-    description!: string;
-    baseCost!: number;
+    
+    constructor(protected description: string, protected baseCost: number) {}
 
     public getDescription(): string {
         return this.description;
@@ -14,19 +14,24 @@ abstract class Car {
 }
 
 class ModelS extends Car {
-    description = 'Model S';
-    baseCost = 80000;
+
+    constructor(){
+        super('Model S',80000)
+    }
 }
 
 class ModelX extends Car {
-    description = 'Model X';
-    baseCost = 85000;
+ 
+    constructor(){
+        super('Model X', 85000)
+    }
 }
 
 abstract class CarOptions extends Car {
-    decoratedCar!: Car;
-    description!: string;
-    optionCost!: number;
+
+    constructor(protected decoratedCar: Car, protected description: string, protected optionCost: number) {
+        super(description, optionCost)
+    }
 
     public getDescription(): string {
         return this.decoratedCar.getDescription() + ', ' + this.description;
@@ -37,24 +42,16 @@ abstract class CarOptions extends Car {
 }
 
 class AutoPilot extends CarOptions {
-    decoratedCar: Car;
-    description: string = 'AutoPilot';
-    optionCost: number = 5000;
 
     constructor(car: Car) {
-        super();
-        this.decoratedCar = car;
+        super(car, 'AutoPilot', 5000)
     }
 }
 
 class PerformancePack extends CarOptions {
-    decoratedCar: Car;
-    description: string = 'Performance Pack';
-    optionCost: number = 10000;
 
     constructor(car: Car) {
-        super();
-        this.decoratedCar = car;
+        super(car, 'Performance Pack', 10000);
     }
 }
 
