@@ -72,7 +72,7 @@ class Fan implements Observer {
 
 const thermostat = new Thermostat();
 
-const tempDisplay = new CentralHeatingSystem(thermostat);
+const heater = new CentralHeatingSystem(thermostat);
 
 const fan = new Fan(thermostat);
 
