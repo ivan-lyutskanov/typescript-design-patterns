@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "decorator": "tsc decorator.ts --outDir ./builds && node ./builds/decorator.js"
+    "decorator": "tsc decorator.ts --outDir ./builds && node ./builds/decorator.js",
+    "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js"
   },
   "keywords": [],
   "author": "",
