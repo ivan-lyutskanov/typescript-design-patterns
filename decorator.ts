@@ -1,4 +1,4 @@
-//Tesla car configurator
+//Example: Tesla car configurator
 
 abstract class Car {
     

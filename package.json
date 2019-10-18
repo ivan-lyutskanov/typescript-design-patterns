@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "decorator": "tsc decorator.ts --outDir ./builds && node ./builds/decorator.js",
-    "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js"
+    "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js",
+    "state": "tsc state.ts --outDir ./builds && node ./builds/state.js"
   },
   "keywords": [],
   "author": "",

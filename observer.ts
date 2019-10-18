@@ -1,3 +1,5 @@
+//Example: Termostat system
+
 interface Subject {
     registerObserver(o: Observer): void;
     removeObserver(o: Observer): void;
