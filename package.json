@@ -7,7 +7,8 @@
     "decorator": "tsc decorator.ts --outDir ./builds && node ./builds/decorator.js",
     "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js",
     "state": "tsc state.ts --outDir ./builds && node ./builds/state.js",
-    "singleton": "tsc singleton.ts --outDir ./builds && node ./builds/singleton.js"
+    "singleton": "tsc singleton.ts --outDir ./builds && node ./builds/singleton.js",
+    "adapter": "tsc adapter.ts --outDir ./builds && node ./builds/adapter.js"
   },
   "keywords": [],
   "author": "",
