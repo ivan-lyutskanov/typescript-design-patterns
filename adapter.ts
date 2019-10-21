@@ -1,3 +1,5 @@
+//Example: Charge Adapter
+
 interface iOSDevice {
     useLightning():void;
 }
@@ -49,7 +51,7 @@ const usbAdapter = new LightningToUSBAdapter(iphone);
 
 usbAdapter.useUSB();
 
-const newestSamsungPhone = new AndoridPhone()
+const newestSamsungPhone = new AndoridPhone();
 const lightningAdapter = new USBToLightning(newestSamsungPhone);
 
 lightningAdapter.useLightning();
