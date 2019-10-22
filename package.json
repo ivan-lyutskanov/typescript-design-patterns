@@ -8,7 +8,8 @@
     "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js",
     "state": "tsc state.ts --outDir ./builds && node ./builds/state.js",
     "singleton": "tsc singleton.ts --outDir ./builds && node ./builds/singleton.js",
-    "adapter": "tsc adapter.ts --outDir ./builds && node ./builds/adapter.js"
+    "adapter": "tsc adapter.ts --outDir ./builds && node ./builds/adapter.js",
+    "factory": "tsc factory.ts --outDir ./builds && node ./builds/factory.js"
   },
   "keywords": [],
   "author": "",
