@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "decorator": "tsc decorator.ts --outDir ./builds && node ./builds/decorator.js",
-    "observer": "tsc observer.ts --outDir ./builds && node ./builds/observer.js",
-    "state": "tsc state.ts --outDir ./builds && node ./builds/state.js",
-    "singleton": "tsc singleton.ts --outDir ./builds && node ./builds/singleton.js",
-    "adapter": "tsc adapter.ts --outDir ./builds && node ./builds/adapter.js",
-    "factory": "tsc factory.ts --outDir ./builds && node ./builds/factory.js"
+    "decorator": "tsc ./patterns/decorator.ts --outDir ./build && node ./build/decorator.js",
+    "observer": "tsc ./patterns/observer.ts --outDir ./build && node ./build/observer.js",
+    "state": "tsc ./patterns/state.ts --outDir ./build && node ./build/state.js",
+    "singleton": "tsc ./patterns/singleton.ts --outDir ./build && node ./build/singleton.js",
+    "adapter": "tsc ./patterns/adapter.ts --outDir ./build && node ./build/adapter.js",
+    "factory": "tsc ./patterns/factory.ts --outDir ./build && node ./build/factory.js"
   },
   "keywords": [],
   "author": "",
